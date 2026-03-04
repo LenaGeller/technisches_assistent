@@ -57,7 +57,7 @@ if st.button("Antwort generieren"):
             antwort = frage_stellen(frage)
 
         st.markdown('<div class="answer-box">', unsafe_allow_html=True)
-        st.markdown(result["answer"])
+        st.markdown(antwort["answer"])
         st.markdown('</div>', unsafe_allow_html=True)
         
 
