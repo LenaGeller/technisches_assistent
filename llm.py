@@ -54,12 +54,6 @@ Regeln:
 * Wenn Informationen fehlen: „Im bereitgestellten Kontext nicht enthalten.“
 * Keine juristische Interpretation über den Kontext hinaus.
 * Keine Spekulationen.
-* Wenn im Kontext eine Abbildung genannt wird, die für das Verständnis wesentlich ist, füge an passender Stelle einen eigenen Absatz in folgendem Format ein:
- Abbildung: image_id
- Beispiel:
- Abbildung: 5_01_abb_1
- Verwende ausschließlich image_ids aus dem Kontext.
- Keine eigenen IDs erfinden.
 * Verweise im Text bei Bedarf auf die zugehörige Abbildung (z. B. ‚siehe Abbildung 3‘), sofern im Kontext eine Abbildung genannt wird.“
 
 ---
