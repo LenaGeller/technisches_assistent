@@ -2,30 +2,47 @@
 import streamlit as st
 from pipeline import frage_stellen
 
-
-st.set_page_config(
-    page_title="Technischer Assistent",
-    layout="centered"
-)
+st.set_page_config(layout="wide")
 
 st.markdown("""
 <style>
-h2 { margin-bottom: 0.3rem; }
-div[data-testid="stTextInput"] { margin-top: -0.5rem; }
+
+.block-container {
+    max-width: 900px;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.stTextInput input {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+}
+
 div.stButton > button {
     width: 100%;
-    border-radius: 4px;
     font-weight: 600;
+    border-radius: 6px;
 }
+
+.answer-box {
+    padding: 1.4rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<h2>Technischer Assistent (Demo)</h2>
-<p style="font-size:0.9rem; color:gray;">
-Demonstrator für strukturierte Verarbeitung technischer Regelwerke.
-</p>
-""", unsafe_allow_html=True)
+st.title("Technischer Assistent")
+
+st.caption(
+"Demonstrator für strukturierte Analyse technischer Regelwerke "
+"(RAG + technische Normtexte)"
+)
 
 st.markdown("#### Frage stellen")
 
@@ -40,11 +57,17 @@ if st.button("Antwort generieren"):
             antwort = frage_stellen(frage)
 
         st.markdown("---")
-        st.markdown(antwort["answer"])
+        st.markdown(
+            f'<div class="answer-box">{antwort["answer"]}</div>',
+            unsafe_allow_html=True
+        )
 
         if antwort["images"]:
             st.markdown("---")
             st.subheader("Relevante Abbildungen")
 
-            for img in antwort["images"]:
-                st.image(img, use_column_width=True)
+            cols = st.columns(len(antwort["images"]))
+
+            for col, img in zip(cols, antwort["images"]):
+                with col:
+                    st.image(img, use_container_width=True)
