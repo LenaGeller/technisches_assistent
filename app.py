@@ -40,7 +40,7 @@ if st.button("Antwort generieren"):
             antwort = frage_stellen(frage)
 
         st.markdown("---")
-        st.markdown(antwort)
+        st.markdown(antwort["answer"])
 
         if antwort["images"]:
             st.markdown("---")
