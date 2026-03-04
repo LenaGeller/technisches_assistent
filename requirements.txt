@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-openai
+langchain-chroma
+chromadb
+openai
+tiktoken
+python-dotenv
