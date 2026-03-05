@@ -65,7 +65,7 @@ if "frage" not in st.session_state:
 
 for q in example_questions:
     if st.button(q):
-        frage = q
+        st.session_state.frage = q
 
 st.markdown("#### Frage stellen")
 
