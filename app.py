@@ -42,13 +42,27 @@ st.title("Technischer Assistent")
 st.markdown("""
 Demonstrator für strukturierte Analyse technischer Regelwerke (RAG + technische Normtexte)  
 
-Dieser Assistent basiert aktuell **nur Kapitel 5** des Dokuments   
+Dieser Assistent basiert aktuell **nur Kapitel 5** des folgenden Dokuments:   
 [IVD-Merkblatt Nr. 3-1 - Konstruktive Ausführung und Abdichtung von Fugen in Sanitär- und Feuchträumen](https://www.abdichten.de/media/merkblaetter/03-1/ivd-merkblatt03-1.pdf)  
 Er beantwortet daher **nur Fragen zu diesem Kapitel.**  
 
 Der Prototyp demonstriert das Prinzip:  
 Ein solches System kann problemlos auf **viele Dokumente oder ganze Normensammlungen** erweitert werden.
 """)
+
+st.subheader("Beispielfragen")
+
+example_questions = [
+"WWie wird eine Anschlussfuge zwischen zwei Wänden abgedichtet?",
+"Wie wird eine Boden-Wand-Fuge fachgerecht ausgeführt und abgedichtet?",
+"Wie wird eine Dreiecksfuge mit Dreikantfase ausgeführt?",
+"Wie wird eine Rechteckfuge konstruktiv ausgeführt?",
+"Wie wird eine Fuge an Bade- oder Duschwannen fachgerecht abgedichtet?"
+]
+
+for q in example_questions:
+    if st.button(q):
+        frage = q
 
 st.markdown("#### Frage stellen")
 
