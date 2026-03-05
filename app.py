@@ -79,8 +79,6 @@ if st.button("Antwort generieren"):
         with st.spinner("Analyse läuft …"):
             antwort = frage_stellen(frage)
 
-        st.markdown("---")
-
         with st.container(border=True):
             st.markdown(antwort["answer"])
         
