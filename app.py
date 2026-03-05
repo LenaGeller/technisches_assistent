@@ -69,7 +69,7 @@ for q in example_questions:
     if st.button(q):
         st.session_state.frage = q
 
-st.markdown("#### Frage stellen")
+st.markdown("### Frage stellen")
 
 frage = st.text_input("", key="frage")
 
