@@ -56,9 +56,10 @@ if st.button("Antwort generieren"):
         with st.spinner("Analyse läuft …"):
             antwort = frage_stellen(frage)
 
-        st.markdown('<div class="answer-box">', unsafe_allow_html=True)
+        st.markdown("---")
+
+        with st.container(border=True):
         st.markdown(antwort["answer"])
-        st.markdown('</div>', unsafe_allow_html=True)
         
 
         if antwort["images"]:
