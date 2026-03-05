@@ -59,7 +59,7 @@ if st.button("Antwort generieren"):
         st.markdown("---")
 
         with st.container(border=True):
-        st.markdown(antwort["answer"])
+            st.markdown(antwort["answer"])
         
 
         if antwort["images"]:
