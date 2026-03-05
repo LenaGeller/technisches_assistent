@@ -68,7 +68,7 @@ for q in example_questions:
 
 st.markdown("#### Frage stellen")
 
-frage = st.text_input("")
+frage = st.text_input("Ihre Frage", key="frage")
 
 if st.button("Antwort generieren"):
 
