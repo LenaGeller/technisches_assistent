@@ -49,8 +49,6 @@ Er beantwortet daher **nur Fragen zu diesem Kapitel.**
 Der Prototyp demonstriert das Prinzip:  
 Ein solches System kann problemlos auf **viele Dokumente oder ganze Normensammlungen** erweitert werden.
 """)
-if "frage" not in st.session_state:
-    st.session_state.frage = ""
 
 example_questions = [
 "Wie wird eine Anschlussfuge zwischen zwei Wänden abgedichtet?",
@@ -62,13 +60,16 @@ example_questions = [
 
 st.subheader("Beispielfragen")
 
+if "frage" not in st.session_state:
+    st.session_state.frage = ""
+
 for q in example_questions:
     if st.button(q):
         frage = q
 
 st.markdown("#### Frage stellen")
 
-frage = st.text_input("Ihre Frage", key="frage")
+frage = st.text_input("", key="frage")
 
 if st.button("Antwort generieren"):
 
