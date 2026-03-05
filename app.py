@@ -40,9 +40,11 @@ div.stButton > button {
 st.title("Technischer Assistent")
 
 st.markdown("""
-Demonstrator für strukturierte Analyse technischer Regelwerke (RAG + technische Normtexte)  
+Demonstrator für die strukturierte Analyse technischer Regelwerke (RAG + technische Normtexte)  
 
-Dieser Assistent basiert aktuell **nur Kapitel 5** des folgenden Dokuments:   
+st.markdown("### Dokumentbasis der Demo")  
+
+Dieser Assistent basiert aktuell **nur auf Kapitel 5** des folgenden Dokuments:   
 [IVD-Merkblatt Nr. 3-1 - Konstruktive Ausführung und Abdichtung von Fugen in Sanitär- und Feuchträumen](https://www.abdichten.de/media/merkblaetter/03-1/ivd-merkblatt03-1.pdf)  
 Er beantwortet daher **nur Fragen zu diesem Kapitel.**  
 
@@ -76,7 +78,7 @@ if st.button("Antwort generieren"):
     if not frage.strip():
         st.warning("Bitte Fragestellung eingeben.")
     else:
-        with st.spinner("Analyse läuft …"):
+        with st.spinner("Dokumente werden analysiert … …"):
             antwort = frage_stellen(frage)
 
         with st.container(border=True):
