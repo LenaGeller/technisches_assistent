@@ -49,16 +49,18 @@ Er beantwortet daher **nur Fragen zu diesem Kapitel.**
 Der Prototyp demonstriert das Prinzip:  
 Ein solches System kann problemlos auf **viele Dokumente oder ganze Normensammlungen** erweitert werden.
 """)
-
-st.subheader("Beispielfragen")
+if "frage" not in st.session_state:
+    st.session_state.frage = ""
 
 example_questions = [
-"WWie wird eine Anschlussfuge zwischen zwei Wänden abgedichtet?",
+"Wie wird eine Anschlussfuge zwischen zwei Wänden abgedichtet?",
 "Wie wird eine Boden-Wand-Fuge fachgerecht ausgeführt und abgedichtet?",
 "Wie wird eine Dreiecksfuge mit Dreikantfase ausgeführt?",
 "Wie wird eine Rechteckfuge konstruktiv ausgeführt?",
 "Wie wird eine Fuge an Bade- oder Duschwannen fachgerecht abgedichtet?"
 ]
+
+st.subheader("Beispielfragen")
 
 for q in example_questions:
     if st.button(q):
