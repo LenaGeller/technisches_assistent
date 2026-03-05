@@ -78,7 +78,7 @@ if st.button("Antwort generieren"):
     if not frage.strip():
         st.warning("Bitte Fragestellung eingeben.")
     else:
-        with st.spinner("Dokumente werden analysiert … …"):
+        with st.spinner("Dokumente werden analysiert…"):
             antwort = frage_stellen(frage)
 
         with st.container(border=True):
