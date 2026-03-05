@@ -42,7 +42,7 @@ st.title("Technischer Assistent")
 st.markdown("""
 Demonstrator für die strukturierte Analyse technischer Regelwerke (RAG + technische Normtexte)  
 
-st.markdown("### Dokumentbasis der Demo")  
+### Dokumentbasis der Demo"  
 
 Dieser Assistent basiert aktuell **nur auf Kapitel 5** des folgenden Dokuments:   
 [IVD-Merkblatt Nr. 3-1 - Konstruktive Ausführung und Abdichtung von Fugen in Sanitär- und Feuchträumen](https://www.abdichten.de/media/merkblaetter/03-1/ivd-merkblatt03-1.pdf)  
