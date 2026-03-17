@@ -100,5 +100,4 @@ if st.button("Antwort generieren"):
             for col, img in zip(cols, antwort["images"]):
                 with col:
                     st.image(img, use_container_width=True)
-                    if img_number:
-                        st.caption(f"Referenzierte Abbildung {img_number.group(1)}")
+                    
