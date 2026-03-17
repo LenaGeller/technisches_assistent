@@ -54,9 +54,11 @@ def frage_stellen(frage: str):
 
     context_parts = []
     image_ids = []
+    quellen_liste = set()  # Nutzen ein Set, um Duplikate zu vermeiden
 
     for d in docs:   # Top 4
         titel = d.metadata.get("quelle", "unbekannt")
+        quellen_liste.add(titel)
         header = f"[QUELLE: {titel}]"
         context_parts.append(header + "\n" + d.page_content)
 
@@ -105,4 +107,5 @@ def frage_stellen(frage: str):
     return {
         "answer": antwort,
         "images": image_paths 
+        "sources": list(quellen_liste)
     }
