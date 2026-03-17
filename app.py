@@ -83,6 +83,12 @@ if st.button("Antwort generieren"):
 
         with st.container(border=True):
             st.markdown(antwort["answer"])
+
+            if "sources" in antwort and antwort["sources"]:
+                st.markdown("---")
+                # Wir fügen alle Quellen zusammen (z.B. mit einem Trenner)
+                quellen_text = ", ".join(antwort["sources"])
+                st.caption(f"Quelle: {quellen_text}")
         
 
         if antwort["images"]:
