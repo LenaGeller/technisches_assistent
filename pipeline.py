@@ -106,6 +106,6 @@ def frage_stellen(frage: str):
     # 5. Strukturierte Rückgabe
     return {
         "answer": antwort,
-        "images": image_paths 
+        "images": image_paths, 
         "sources": list(quellen_liste)
     }
