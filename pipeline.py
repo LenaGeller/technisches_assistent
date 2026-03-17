@@ -57,7 +57,7 @@ def frage_stellen(frage: str):
     quellen_liste = set()  # Nutzen ein Set, um Duplikate zu vermeiden
 
     for d in docs:   # Top 4
-        titel = d.metadata.get("quelle", "unbekannt")
+        titel = d.metadata.get("quelle") or d.metadata.get("source") or "Unbekannte Quelle"
         quellen_liste.add(titel)
         header = f"[QUELLE: {titel}]"
         context_parts.append(header + "\n" + d.page_content)
